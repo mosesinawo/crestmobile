@@ -15,7 +15,7 @@ const handleActive = (item ) =>{
     setActive(item)
 }
 
-console.warn(active)
+// console.warn(active)
 
     return (
         <View style={{ marginBottom: 40, marginTop: 20 }}>

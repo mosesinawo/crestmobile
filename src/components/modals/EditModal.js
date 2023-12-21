@@ -1,9 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
 import { Feather } from '@expo/vector-icons';
 import React from 'react';
 import styles from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 const EditModal = ({ setmodal, modal }) => {
+
+    const navigation = useNavigation()
     return (
         <View style={modal ? styles.modal : styles.modalHide}>
 
@@ -18,12 +21,12 @@ const EditModal = ({ setmodal, modal }) => {
                 </View>
                 <View style={styles.body}>
                     <Text style={styles.text}>What type of listing do you want to boost to?</Text>
-                    <View style={styles.buttonContainer}>
+                    <Pressable style={styles.buttonContainer} onPress={() => navigation.navigate("BoostPremium")}>
                         <Text style={styles.button}>Premium Listing</Text>
-                    </View>
-                    <View style={styles.buttonContainer}>
+                    </Pressable>
+                    <Pressable style={styles.buttonContainer} onPress={() => navigation.navigate("BoostListing")}>
                         <Text style={styles.button}>Premium Boost Listing</Text>
-                    </View>
+                    </Pressable>
                 </View>
 
             </View>

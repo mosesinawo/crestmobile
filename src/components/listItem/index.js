@@ -3,14 +3,20 @@ import ListData from '../../../assets/data/ListData';
 import React from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { EvilIcons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 
 const ListItem = ({item, setmodal, setDeletemodal}) => {
+    const navigation = useNavigation()
 
 
     return (
         <View style={styles.container}>
+            <View style={{position:'relative'}}>
             <Image source={item.image} style={styles.image} />
+            <Text onPress={() => setmodal(true)} style={{position:'absolute', color:'#fff',backgroundColor:'#262C55',
+        borderRadius:4, fontSize:15, paddingHorizontal:10,paddingVertical:5, right:20, bottom:20}}>Boost Asset</Text>
+            </View>
             <View style={styles.row1}>
                 <View style={styles.row2}>
                     <Text style={styles.title}>{item.name}</Text>
@@ -18,7 +24,7 @@ const ListItem = ({item, setmodal, setDeletemodal}) => {
                     <Text style={styles.lightText}> {item.size}</Text>
                 </View>
                 <View style={{flexDirection:'row', alignItems:'center', marginLeft:'auto',}}>
-                    <MaterialCommunityIcons style={{marginRight:10}} name="pencil-outline" size={25} color="#262C5580" onPress={() => setmodal(true)} />
+                    <MaterialCommunityIcons style={{marginRight:10}} name="pencil-outline" size={25} color="#262C5580" onPress={() => navigation.navigate("EditAsset")} />
                     <EvilIcons name="trash" size={27} color="#D13852" onPress={() => setDeletemodal(true)} />
                 </View>
 

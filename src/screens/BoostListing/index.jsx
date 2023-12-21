@@ -4,23 +4,24 @@ import { AntDesign } from '@expo/vector-icons';
 import SubscriptionPlans from '../../components/subPlans'
 import { useNavigation } from '@react-navigation/native';
 
-const BoostPremium = () => {
+const BoostListing = () => {
+
     const navigation = useNavigation()
 
     return (
         <>
             <ScrollView>
                 <View style={styles.page}>
-                <Pressable onPress={() => navigation.navigate("Lands")} style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <AntDesign name="arrowleft" size={24} color="#262C55" /> 
-                <Text style={{ color: '#262C55', fontSize: 20, alignItems: 'center', fontWeight: 'bold' }}>
-                    Boost Assets</Text>
+                    <Pressable onPress={() => navigation.navigate("Lands")} style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <AntDesign name="arrowleft" size={24} color="#262C55" />
+                        <Text style={{ color: '#262C55', fontSize: 20, alignItems: 'center', fontWeight: 'bold' }}>
+                            Boost Assets</Text>
 
-            </Pressable>
+                    </Pressable>
                     <Text style={{
                         color: '#262C55', fontSize: 15, fontWeight: '900',
-                        marginBottom: 20, marginTop:35
-                    }}>Premium Boost Listing</Text>
+                        marginBottom: 20, marginTop: 35
+                    }}>Premium Listing</Text>
                     <View style={styles.container}>
                         <View style={styles.row}>
                             <Text style={styles.title}>2 Bedroom Flat</Text>
@@ -53,13 +54,13 @@ const BoostPremium = () => {
     )
 }
 
-export default BoostPremium
+export default BoostListing
 
 const styles = StyleSheet.create({
     page: {
         paddingHorizontal: 20,
         paddingVertical: 30,
-        marginTop:30
+        marginTop: 30
     },
     container: {
         marginBottom: 30,
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
         fontSize: 13
     },
     input: {
-        borderColor: '#262C554D',
+        borderColor: '#011B332E',
         borderWidth: 1,
         height: 46,
         width: '100%',

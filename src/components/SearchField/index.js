@@ -13,7 +13,7 @@ const SearchFieldHeader = () => {
         <View style={{ marginBottom: 40, marginTop: 20 }}>
             <Pressable onPress={() => navigation.navigate("Lands")} style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <AntDesign name="arrowleft" size={24} color="#262C55" />
-                <Text  style={{ color: '#262C55', fontSize: 20, alignItems: 'center', fontWeight: 'bold' }}>
+                <Text style={{ color: '#262C55', fontSize: 20, alignItems: 'center', fontWeight: 'bold' }}>
                     Search for Lands</Text>
 
             </Pressable>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#fff',
-        paddingTop:30
+        paddingTop: 30
     },
     headerText: {
         color: '#3D79EF',
